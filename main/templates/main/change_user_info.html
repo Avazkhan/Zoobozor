@@ -1,0 +1,14 @@
+{% extends "layout/basic.html" %}
+
+{% load bootstrap4 %}
+
+{% block title %}Shaxsiy ma`lumotlarni tahrirlash{% endblock %}
+
+{% block content %}
+<h2>{{ user.username }}ning shaxsiy ma`lumotlarni tahrirlash</h2>
+<form method="post">
+    {% csrf_token %}
+    {% bootstrap_form form layout='horizontal' %}
+    {% buttons submit='Saqlash' %}{% endbuttons %}
+</form>
+{% endblock %}

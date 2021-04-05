@@ -1,0 +1,14 @@
+{% extends "layout/basic.html" %}
+
+{% load bootstrap4 %}
+
+{% block title %}Ro`yxatdan o`tish{% endblock %}
+
+{% block content %}
+<h2>Yangi foydalanuvchini ro`yxatdan o`tkazish</h2>
+<form method="post">
+    {% csrf_token %}
+    {% bootstrap_form form layout='horizontal' %}
+    {% buttons submit='Ro`yxatdan o`tish' %}{% endbuttons %}
+</form>
+{% endblock %}

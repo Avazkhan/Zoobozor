@@ -1,0 +1,13 @@
+{% extends "layout/basic.html" %}
+
+{% load bootstrap4 %}
+
+{% block title %}Foydalanuvchini o`chirish{% endblock %}
+
+{% block content %}
+<h2>{{ object.username }} nomli foydalanuvchini o`chirish</h2>
+<form method="post">
+    {% csrf_token %}
+    {% buttons submit='O`chirish' %}{% endbuttons %}
+</form>
+{% endblock %}
